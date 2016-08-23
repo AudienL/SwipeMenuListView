@@ -61,6 +61,15 @@ public class MainActivity extends AppCompatActivity {
 
         mAdapter = new MyAdapter();
         mSwipeMenuListView.setAdapter(mAdapter);
+
+        // 点击选项中的删除按钮
+        mSwipeMenuListView.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
+                // false: close | true: not close
+                return false;
+            }
+        });
     }
 
     private class MyAdapter extends BaseAdapter {
@@ -90,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
             holder.tv.setText(item);
 
+            /** 注意：这里只能对某个子元素设置click事件，不能对整个item设置onItemClickListener */
             holder.tv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

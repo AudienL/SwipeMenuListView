@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.audienl.swipemenulistview.MainActivity">
 
-    <com.audienl.swipemenulistviewcore.SwipeMenuListView
-        android:id="@+id/swipe_menu_list_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+<com.audienl.swipemenulistviewcore.SwipeMenuListView
+    android:id="@+id/swipe_menu_list_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
 </RelativeLayout>
